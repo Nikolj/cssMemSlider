@@ -57,6 +57,7 @@ h6 {
 
 html {
 	background: #25282a;
+	background-image: url("./assets/img/gravel.png");
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-size: 20px;
 	color: #fff;
@@ -64,7 +65,7 @@ html {
 
 .conteiners {
 	width: 90%;
-	max-width: 50rem;
+	max-width: 40rem;
 	margin: 1.5rem auto;
 	overflow: hidden;
 	position: relative;
@@ -112,7 +113,7 @@ input {
 
 .butt {
 	display: flex;
-	background-color: #25282a;
+	
 }
 
 .button {
