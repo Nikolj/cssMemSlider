@@ -3,62 +3,31 @@
 	margin: 0;
 	border: 0rem;
 }
+
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-:focus,
-:active {
-	outline: none;
-}
-a:focus,
-a:active {
-	outline: none;
-}
-html,
-input,
-button,
-textarea {
-	font-family: inherit;
-}
+
 input::-ms-clear {
 	display: none;
 }
+
 button {
 	cursor: pointer;
 }
+
 button::-moz-focus-inner {
 	padding: 0;
 	border: 0;
-}
-a,
-a:visited {
-	color: #fff;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-ul li {
-	list-style-type: none;
-}
-img {
-	vertical-align: top;
-}
-
-h3,
-h4,
-h5,
-h6 {
-	font-size: inherit;
-	font-weight: inherit;
 }
 
 html {
 	background: #25282a;
 	background-image: url("./assets/img/gravel.png");
-	font-family: "Helvetica", "Arial", sans-serif;
+	font-weight: bold;
+	font-family: "Arial", sans-serif;
 	font-size: 20px;
 	color: #fff;
 }
@@ -107,13 +76,11 @@ input {
 	height: 0rem;
 	opacity: 0;
 	visibility: hidden;
-	transform: translateX(1rem);
-	
+	transform: translateX(1rem);	
 }
 
 .butt {
 	display: flex;
-	
 }
 
 .button {
@@ -168,11 +135,11 @@ input {
 	transform: translateX(calc(-20% * 4 - 4rem / 4));
 }
 
-#slider1:checked ~ .contentControl > .contentTex> #cont1,
-#slider2:checked ~ .contentControl > .contentTex> #cont2,
-#slider3:checked ~ .contentControl > .contentTex> #cont3,
-#slider4:checked ~ .contentControl> .contentTex> #cont4,
-#slider5:checked ~ .contentControl > .contentTex> #cont5 {
+#slider1:checked ~ .contentControl > .contentTex > #cont1,
+#slider2:checked ~ .contentControl > .contentTex > #cont2,
+#slider3:checked ~ .contentControl > .contentTex > #cont3,
+#slider4:checked ~ .contentControl > .contentTex > #cont4,
+#slider5:checked ~ .contentControl > .contentTex > #cont5 {
 	visibility: visible;
 	height: auto;
 	opacity: 1;
