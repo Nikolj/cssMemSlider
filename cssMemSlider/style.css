@@ -1,0 +1,195 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0rem;
+}
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+html {
+	background: #25282a;
+	background-image: url("./assets/img/gravel.png");
+	font-weight: bold;
+	font-family: "Arial", sans-serif;
+	font-size: 20px;
+	color: #fff;
+}
+
+.conteiners {
+	width: 90%;
+	max-width: 40rem;
+	margin: 1.5rem auto;
+	overflow: hidden;
+	position: relative;
+}
+
+input {
+	display: none;
+}
+
+.slider {
+	display: flex;
+	width: calc(500% + 4rem);
+	gap: 1rem;
+	transition: 0.5s;
+	margin-bottom: 1rem;
+}
+
+.slid {
+	width: calc((100% - 4rem) / 5);
+	scroll-snap-align: start;
+}
+
+.slid img {
+	width: 100%;
+	height: auto;
+}
+
+.contentControl {
+	display: flex;
+	justify-content: space-between;
+	gap: 2%;
+}
+
+.contentTex{
+	margin-top: 0.5rem;
+}
+
+.text {
+	height: 0rem;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(1rem);	
+}
+
+.butt {
+	display: flex;
+}
+
+.button {
+	width: 1.2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button > span {
+	display: block;
+	width: 0.8rem;
+	height: 0.8rem;
+	border: solid 0.1rem #71abfe;
+	background-color: #71abfe;
+	border-radius: 50%;
+	transition: 0.2s;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+.button:hover > span {
+	border: solid 0.1rem #fff;
+	background-color: #fff;
+}
+
+.button:active > span {
+	border: solid 0.1rem #fff;
+	background-color: #fff;
+}
+
+#slider1:checked ~ .slider {
+	transform: translateX(0);
+}
+
+#slider2:checked ~ .slider {
+	transform: translateX(calc(-20% * 1 - 1rem / 4));
+}
+
+#slider3:checked ~ .slider {
+	transform: translateX(calc(-20% * 2 - 2rem / 4));
+}
+
+#slider4:checked ~ .slider {
+	transform: translateX(calc(-20% * 3 - 3rem / 4));
+}
+
+#slider5:checked ~ .slider {
+	transform: translateX(calc(-20% * 4 - 4rem / 4));
+}
+
+#slider1:checked ~ .contentControl > .contentTex > #cont1,
+#slider2:checked ~ .contentControl > .contentTex > #cont2,
+#slider3:checked ~ .contentControl > .contentTex > #cont3,
+#slider4:checked ~ .contentControl > .contentTex > #cont4,
+#slider5:checked ~ .contentControl > .contentTex > #cont5 {
+	visibility: visible;
+	height: auto;
+	opacity: 1;
+	transform: translateX(0);
+	transition: 0.5s;
+}
+
+#slider1:checked ~ .contentControl> .butt > #sel1 > span,
+#slider2:checked ~ .contentControl> .butt > #sel2 > span,
+#slider3:checked ~ .contentControl> .butt > #sel3 > span,
+#slider4:checked ~ .contentControl> .butt > #sel4 > span,
+#slider5:checked ~ .contentControl> .butt > #sel5 > span {
+	border: solid 0.1rem #71abfe;
+	background-color: transparent;
+}
+
+#slider1:checked ~ .contentControl > .butt > #sel1:hover > span,
+#slider2:checked ~ .contentControl > .butt > #sel2:hover > span,
+#slider3:checked ~ .contentControl > .butt > #sel3:hover > span,
+#slider4:checked ~ .contentControl > .butt > #sel4:hover > span,
+#slider5:checked ~ .contentControl > .butt > #sel5:hover > span {
+	border: solid 0.1rem #fff;
+}
+
+#slider1:checked ~ .contentControl > .butt > #sel1:active > span,
+#slider2:checked ~ .contentControl > .butt > #sel2:active > span,
+#slider3:checked ~ .contentControl > .butt > #sel3:active > span,
+#slider4:checked ~ .contentControl > .butt > #sel4:active > span,
+#slider5:checked ~ .contentControl > .butt > #sel5:active > span {
+	border: solid 0.1rem #fff;
+}
+
+@media screen and (max-width: 38.35rem) {
+	.contentControl {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.text {
+		flex-basis: 100%;
+		font-size: 0.9rem;
+	}
+
+	.butt {
+		flex-basis: 100%;
+		order: -1;
+		align-self: center;
+		margin-bottom: 0.1rem;
+		display: flex;
+		justify-content: center;
+	}
+}
